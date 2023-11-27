@@ -1,5 +1,8 @@
 LaravelでPDFを出力する
 https://qiita.com/yukieeeee/items/2085aad47f73aae3889e
 
+一時ファイルにPDFを保存
+https://qiita.com/ah__memo/items/168a957a96f91ba790ee
+
 Laravel ローカルにアップロードした画像をzip化してダウンロードする
 https://qiita.com/miriwo/items/950647388ae18a7b6b3c
