@@ -10,9 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
+//ホーム
+Route::get('/', 'HomeController@index')->name('home');
+//PDF出力
 Route::get('/pdf', 'PdfController@test')->name('pdf.test');
+
+

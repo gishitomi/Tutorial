@@ -11,10 +11,12 @@
         <tr>
             <td>aa</td>
             <td>bb</td>
+
         </tr>
         <tr>
             
         </tr>
     </table>
+    {{ request()->input('name') }}
 </body>
 </html>
