@@ -9,20 +9,10 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
-        <!-- pickadate用スタイル -->
-<link rel="stylesheet" href="{{ asset('lib/themes/default.css') }}" id="theme_base">
-<link rel="stylesheet" href="{{ asset('lib/themes/default.date.css') }}" id="theme_date">
+        <link rel="stylesheet" href="{{ asset('css/calendar.css') }}">
         <!-- Script -->
         <script src="{{ asset('js/app.js') }}"></script>
 
-        <!-- pickadate本体 -->
-        <!-- jQuery -->
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="{{ asset('lib/picker.js') }}"></script>
-<script src="{{ asset('lib/picker.date.js') }}"></script>
-<script src="{{ asset('lib/picker.time.js') }}"></script>
-<!-- レガシーブラウザへの対応用ファイル -->
-<script src="{{ asset('lib/legacy.js') }}"></script>
 </head>
 <body>
     <h1>テスト</h1>
@@ -54,16 +44,8 @@
 
     <button class="js-modal-button">モーダルボタン</button>
 @include('modal.calendar-modal')
-
-        <script src='{{ asset('fullcalendar-6.1.10/dist/index.global.min.js') }}'></script>
+<script src="{{ asset('js/calendar.js') }}"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var calendarEl = document.getElementById('calendar');
-                var calendar = new FullCalendar.Calendar(calendarEl, {
-                    initialView: 'dayGridMonth'
-                });
-                calendar.render();
-            });
 
             const modal = document.querySelector('.js-modal'); // layer要素に付与したjs-modalクラスを取得し変数に格納
 const modalButton = document.querySelector('.js-modal-button'); // button要素に付与したjs-modal-buttonクラスを取得し、変数に格納
@@ -75,13 +57,8 @@ modalButton.addEventListener('click', () => {
 });
 modalClose.addEventListener('click', () => { // xボタンをクリックしたときのイベントを登録
   modal.classList.remove('is-open'); 
-});
-$(function() {
-    $('#date_box').pickadate({
-    format: 'yyyy/mm/dd'
-});
-})
 
-        </script>
+});
+</script>
 </body>
 </html>
